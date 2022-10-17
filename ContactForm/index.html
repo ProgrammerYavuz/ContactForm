@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="tr">
+    <meta name="author" content="ProgrammerYavuz">
+    <meta name="generator" content="Visual Studio Code">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link type="image/png" rel="icon" sizes="96x96" href="./favicon.png">
+</head>
+<body>
+
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false">
+            <div class="contact-box">
+                <div class="left"></div>
+                <div class="right">
+                    <h2>İletişim Formu</h2>
+                    <input type="text" class="input-box" placeholder="İsim Soyisim" id="name" required>
+                    <input type="email" class="input-box" placeholder="Mail Adresi" id="email" required>
+                    <input type="text" class="input-box" placeholder="Konu" id="subject" id="subject" required>
+                    <input type="text" class="input-box" placeholder="Telefon Numarası" id="phone" required minlength="11" maxlength="11">
+                    <textarea rows="5" class="input-box" placeholder="Mesajınız..." id="message" required></textarea>
+                    <button class="btn">Gönder</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
